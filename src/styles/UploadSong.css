@@ -1,0 +1,307 @@
+.upload-song-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.upload-song-form {
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.upload-song-form h2 {
+    color: #ddd;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 94%;
+    padding: 15px;
+    border: none !important;
+    border-radius: 10px;
+    color: #ddd;
+    background-color: #444444 !important;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none !important;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.file-upload {
+    margin-bottom: 20px;
+}
+
+.file-label {
+    display: block;
+    padding: 15px;
+    background-color: #444444;
+    border: 2px dashed #b388ff;
+    color: #ddd;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.file-label:hover {
+    background-color: #6a6a6a;
+}
+
+.file-input {
+    display: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #b388ff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #8f6ccc;
+}
+
+.featured-artists {
+    margin-bottom: 20px;
+}
+
+.featured-artists h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.featured-artists ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.featured-artists li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.featured-artists button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+select {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: #ddd;
+    background-color: #444444 !important;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+select:focus {
+    border-color: #b388ff;
+    outline: none;
+}
+
+option {
+    background-color: #444444 !important;
+    color: #757575 !important;
+}
+
+button[type="button"] {
+    padding: 10px 15px;
+    background-color: #b388ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .upload-song-form {
+        padding: 30px;
+    }
+
+    .upload-song-form h2 {
+        font-size: 28px;
+    }
+
+    .submit-button {
+        font-size: 16px;
+    }
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-container input:focus {
+    border-color: #b388ff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(179, 136, 255, 0.2);
+}
+
+.search-results {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;
+    background-color: #444444;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-result-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #ddd;
+    border-bottom: 1px solid #f0f0f0;
+    
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background-color: #6a6a6a;
+}
+
+.selected-artists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: #121212;
+    margin-bottom: 15px;
+}
+
+.selected-artist {
+    background-color: #e8e0ff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.selected-artist:hover {
+    background-color: #d9c8ff;
+}
+
+.remove-artist {
+    background: none;
+    border: none;
+    color: #7c4dff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    line-height: 1;
+    margin-left: 5px;
+    transition: color 0.2s;
+}
+
+.remove-artist:hover {
+    color: #5e35b1;
+}
+
+.app.light .upload-song-container {
+    background-color: #ffffff;
+}
+
+.app.light .upload-song-form {
+    background-color: #f9f9f9;
+}
+
+.app.light .upload-song-form h2 {
+    color: #333;
+}
+
+.app.light .form-group input,
+.app.light .form-group textarea {
+    color: #000;
+    background-color: #ffffff !important;
+}
+
+.app.light .file-label {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.app.light .submit-button {
+    background-color: #6200ea;
+}
+
+.app.light .submit-button:hover {
+    background-color: #5e35b1;
+}
+
+.app.light .search-container input {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+
+.app.light .search-results {
+    background-color: #ffffff;
+}
+
+.app.light .search-result-item {
+    color: #000;
+}
+
+.app.light .selected-artists {
+    color: #000;
+}
+
+.app.light .selected-artist {
+    background-color: #e0e0e0;
+}

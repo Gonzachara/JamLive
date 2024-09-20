@@ -1,0 +1,77 @@
+.edit-song {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.edit-song h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.edit-song form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-song form > div {
+    margin-bottom: 15px;
+}
+
+.edit-song label {
+    display: block;
+    color: #b3b3b3;
+    margin-bottom: 5px;
+}
+
+.edit-song input[type="text"],
+.edit-song input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #282828;
+    border: 1px solid #404040;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.edit-song button {
+    background-color: #7c4dff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.edit-song button:hover {
+    background-color: #874dff;
+}
+
+.app.light .edit-song {
+    background-color: #ffffff;
+}
+
+.app.light .edit-song h2 {
+    color: #333;
+}
+
+.app.light .edit-song label {
+    color: #333;
+}
+
+.app.light .edit-song input[type="text"],
+.app.light .edit-song input[type="file"] {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+.app.light .edit-song button {
+    background-color: #6200ea;
+}
+
+.app.light .edit-song button:hover {
+    background-color: #5e35b1;
+}

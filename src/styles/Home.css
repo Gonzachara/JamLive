@@ -1,0 +1,312 @@
+.main-content {
+    height: 100vh;
+    overflow-y: auto; /* Permite el scroll vertical */
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+}
+
+.home-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.home-header h1 {
+    font-size: 2.5em;
+    color: #b388ff;
+    margin-bottom: 10px;
+}
+
+.home-header p {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+}
+
+.featured-section, .all-songs-section {
+    margin-bottom: 40px;
+}
+
+.featured-section h2, .all-songs-section h2 {
+    font-size: 1.8em;
+    color: var(--on-background-color);
+    margin-bottom: 20px;
+}
+
+.featured-songs {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+    scrollbar-width: none;  /* Para Firefox */
+    -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+}
+
+.featured-songs::-webkit-scrollbar {
+    display: none;  /* Para Chrome, Safari y Opera */
+}
+
+.song-card, .featured-song-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 1 / 1;
+    width: 100%;
+}
+
+.song-card {
+    position: relative; /* Asegúrate de que el contenedor sea relativo */
+    overflow: hidden; /* Oculta el contenido que sobresale */
+}
+
+.song-card:hover .overlay {
+    opacity: 1; /* Muestra el overlay al hacer hover */
+}
+
+.song-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    color: #fff;
+}
+
+.song-title {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.song-artist {
+    font-size: 0.9em;
+    margin: 5px 0 10px;
+    opacity: 0.8;
+    color: #b3b3b3 !important;
+    cursor: pointer;
+}
+
+.song-artist a {
+    color: #b3b3b3 !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.song-artist-link:hover {
+    color: #fff;
+    text-decoration: underline !important;
+}
+
+.song-artist:hover {
+    text-decoration: underline !important;
+}
+
+.song-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.play-button {
+    background: none;
+    border: none;
+    color: #b388ff;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.play-button svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    z-index: 1;
+}
+
+.action-button {
+    background: none;
+    border: none;
+    color: #b388ff;
+    cursor: pointer;
+    padding: 0;
+}
+
+.action-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .featured-songs {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+
+    .song-card, .featured-song-card {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Ocultar la barra de desplazamiento en todo el cuerpo de la página */
+body {
+    scrollbar-width: none;  /* Para Firefox */
+    -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+}
+
+body::-webkit-scrollbar {
+    display: none;  /* Para Chrome, Safari y Opera */
+}
+
+/* Eliminar la barra de desplazamiento del cuerpo de la página */
+html, body {
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+    overflow: -moz-scrollbars-none; /* Para Firefox antiguo */
+}
+
+/* Para Chrome, Safari y Opera */
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+}
+
+/* Asegurarse de que el contenido ocupe toda la altura de la ventana */
+#root {
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Aplicar el mismo estilo al contenedor principal si es necesario */
+.home-container {
+    min-height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.home-container::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+}
+
+.all-songs-section {
+    max-height: calc(100vh - 300px);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.all-songs-section::-webkit-scrollbar {
+    display: none;
+}
+
+.all-songs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding-right: 10px;
+}
+
+.app.light .home-header h1 {
+    color: #6200ea;
+}
+
+.app.light .home-header p {
+    color: #7c7c7c;
+}
+
+.app.light .featured-section h2, .app.light .all-songs-section h2 {
+    color: #000;
+}
+
+.average-rating, .average-rating-home {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    cursor: default;
+}
+
+.average-rating-text {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #b388ff; /* Color para el texto de la puntuación */
+    font-size: 0.8em; /* Tamaño de fuente para la puntuación */
+}
+
+.rating-stars, .rating-stars-home {
+    display: flex;
+}
+
+.star {
+    font-size: 1.2em;
+    color: #b3b3b3; /* Color de las estrellas vacías */
+    transition: color 0.3s ease;
+}
+
+.star.filled {
+    color: #ffcc00; /* Color de las estrellas llenas */
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Oculta el overlay por defecto */
+    transition: opacity 0.3s ease; /* Transición suave */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Gris oscuro con opacidad */
+}
+
+.play-button-overlay {
+    background-color: #b388ff; /* Color violeta */
+    border: none;
+    color: white;
+    padding: 15px; /* Ajusta el padding para hacerlo circular */
+    border-radius: 50%; /* Hace que el botón sea circular */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    width: 70px; /* Ancho del botón */
+    height: 70px; /* Alto del botón */
+    box-shadow: 4px 1px 4px rgba(130, 81, 219, 0.9); /* Ajusta el box shadow para un efecto de sombra más suave */
+}
+
+.play-button-overlay:hover {
+    background-color: #9a67d9; /* Color más oscuro al hacer hover */
+}
+
+.play-button-overlay svg {
+    width: 40px; /* Ajusta el tamaño del ícono */
+    height: 40px; /* Ajusta el tamaño del ícono */
+}

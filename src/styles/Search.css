@@ -1,0 +1,218 @@
+    .search-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        font-family: 'Arial', sans-serif;
+    }
+    
+    .search-container h1 {
+        font-size: 2.5rem;
+        color: #b388ff;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .search-bar {
+        display: flex;
+        align-items: center;
+        background-color: #282828;
+        border-radius: 30px;
+        padding: 0.5rem 1rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .app.light .search-container {
+        background-color: #ffffff;
+    }
+
+    .app.light .search-container h1 {
+        color: #6200ea;
+    }
+
+    .app.light .search-bar {
+        background-color: #eeeeee;
+    }
+
+    .app.light .search-result-section {
+        background-color: #ffffff;
+    }
+
+    .app.light .search-song-item {
+        background-color: #c0c0c0;
+    }
+    
+    .search-input {
+        flex: 1;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .search-input:focus {
+        outline: none;
+    }
+    
+    .search-input::placeholder {
+        color: #b3b3b3;
+    }
+    
+    .search-icon {
+        color: #b3b3b3;
+        font-size: 1.2rem;
+    }
+    
+    .search-results-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2.5rem;
+    }
+    
+    .search-result-section {
+        background-color: #1e1e1e;
+        border-radius: 12px;
+        padding: 1.75rem;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .search-result-section:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    
+    .search-result-section h2 {
+        font-size: 1.75rem;
+        color: #b388ff;
+        margin-bottom: 1.25rem;
+        border-bottom: 2px solid #b388ff;
+        padding-bottom: 0.75rem;
+    }
+    
+    .search-song-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .search-song-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: #282828;
+        margin-bottom: 1rem;
+        transition: background-color 0.3s ease;
+    }
+    
+    .search-song-item:hover {
+        background-color: #333333;
+    }
+    
+    .search-song-info {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+    
+    .search-song-cover {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 6px;
+        margin-right: 1rem;
+    }
+    
+    .search-song-details {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .search-song-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 0.3rem;
+    }
+    
+    .search-song-artist {
+        font-size: 0.95rem;
+        color: #b3b3b3;
+    }
+    
+    .search-artist-link {
+        color: #b3b3b3 !important;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .search-artist-link:hover {
+        color: #fff;
+        text-decoration: underline !important;
+    }
+    
+    .search-song-actions {
+        display: flex;
+        gap: 0.75rem;
+    }
+    
+    .search-action-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.6rem;
+        border-radius: 50%;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .search-action-button svg {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .search-play-button {
+        color: #b388ff;
+    }
+    
+    .search-like-button, .search-favorite-button {
+        color: #b3b3b3;
+    }
+    
+    .search-like-button svg, .search-favorite-button svg {
+        fill: none;
+        stroke: #b3b3b3;
+        stroke-width: 2;
+    }
+    
+    .search-like-button.active, .search-favorite-button.active {
+        color: #b388ff;
+    }
+    
+    .search-like-button.active svg, .search-favorite-button.active svg {
+        fill: #b388ff;
+        stroke: #b388ff;
+    }
+    
+    
+    @media (max-width: 600px) {
+        .search-results-container {
+            grid-template-columns: 1fr;
+        }
+    
+        .search-song-item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .search-song-info {
+            margin-bottom: 1rem;
+        }
+    
+        .search-song-actions {
+            width: 100%;
+            justify-content: space-around;
+        }
+    }

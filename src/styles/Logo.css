@@ -1,0 +1,41 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.music-bars {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 40px; /* Ajusta la altura según sea necesario */
+    margin-right: 10px; /* Espacio entre el logo y el título */
+}
+
+.bar {
+    width: 5px; /* Ajusta el ancho según sea necesario */
+    margin: 0 2px;
+    background-color: #b388ff;
+    animation: sound 1.2s linear infinite;
+}
+
+@keyframes sound {
+    0% {
+        opacity: 0.35;
+        height: 10%;
+    }
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+.logo-title {
+    margin-left: -20px;
+    margin-top: 30px;
+    font-size: 26px; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: var(--on-surface-color);
+}
+
+.app.light .logo-title {
+    color: #b388ff;
+}

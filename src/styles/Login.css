@@ -1,0 +1,81 @@
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: var(--background-color);
+    }
+    
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background-color: var(--surface-color);
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .login-form input {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--on-surface-color);
+    }
+    
+    .login-form button {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    
+    .login-form button:hover {
+        background-color: #7c4dff;
+    }
+    
+    .google-sign-in {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        color: #757575;
+        border: 1px solid #dadce0;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.2s, box-shadow 0.2s;
+        margin-bottom: 10px;
+        width: 300px;
+    }
+    
+    .google-sign-in:hover {
+        background-color: #f8f8f8;
+        box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+    }
+    
+    .google-sign-in svg {
+        margin-right: 10px;
+    }
+    
+    .toggle-auth {
+        margin-top: 10px;
+        background: none;
+        border: none;
+        color: var(--secondary-color);
+        cursor: pointer;
+    }
+    
+    .error-message {
+        color: #ff4d4d;
+        margin-bottom: 10px;
+        text-align: center;
+    }
